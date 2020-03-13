@@ -1,0 +1,9 @@
+{
+  "db": {
+    "host": "localhost",
+    "user": "slacking",
+    "password": "ySkg9]p`&'(WQS-ZNgW!#@f&",
+    "database": "SlackingUsers"
+  },
+  "secret": "7E_3G23K?x?9m=eFqp%sp#^$8ZU9Sx&STFF6zPvYDKPEKN#2mJ^X^@?h+r#rHh8P"
+}
