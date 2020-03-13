@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express()
 
-const expressjwt = require('expressjwt')
+const expressjwt = require('express-jwt')
 const config = require('config')
 
 const server = require('http').Server(app)
