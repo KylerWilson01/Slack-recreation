@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useAuth } from '../lib/Auth'
 
 export default props => {
@@ -10,11 +10,7 @@ export default props => {
   function handleSubmit(e) {
     e.preventDefault()
 
-    signin(username, password).then(resp => {
-      return (
-        <Redirect to='/' />
-      )
-    })
+    signin(username, password)
   }
 
   return (
