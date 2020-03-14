@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import { useAuth } from '../lib/Auth'
 
 export default props => {
@@ -10,8 +10,10 @@ export default props => {
   function handleSubmit(e) {
     e.preventDefault()
 
-    signin(username, password).then(profile => {
-      console.log(profile)
+    signin(username, password).then(resp => {
+      return (
+        <Redirect to='/' />
+      )
     })
   }
 
@@ -21,7 +23,7 @@ export default props => {
         <input type="text" value={username} onChange={e => setUsername(e.target.value)} placeholder="username" />
         <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="password" />
         <button type='submit'>Login</button>
-        {/* <Link to='/signup'>Signup</Link> */}
+        <Link to='/signup'>Signup</Link>
       </form>
     </div>
   )

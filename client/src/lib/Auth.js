@@ -119,8 +119,6 @@ export const AuthProvider = props => {
     signout: signout
   }
 
-  console.log(value)
-
   return (
     <AuthContext.Provider value={value}>{props.children}</AuthContext.Provider>
   )

@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 import io from 'socket.io-client'
+import { useAuth } from '../lib/Auth'
 
 export default props => {
+  const { signout } = useAuth()
   const [text, setText] = useState('')
   const [messages, setMessages] = useState([])
 
   return (
     <div>
-      <div>
-        <input type="text" />
-        <button type="submit">Set Alias</button>
-      </div>
+      <button onClick={e => signout()}>Logout</button>
       <div>
         <textarea
           type="text"
